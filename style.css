@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.logo-text {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 6rem 1.5rem 3rem;
+  background:
+    radial-gradient(circle at top right, #f2b705 0%, transparent 45%),
+    radial-gradient(circle at bottom left, #1db954 0%, transparent 45%);
+}
+
+/* LOGO VISUAL */
+.logo-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 1rem;
+}
+
+.logo-box img {
+  height: 80px;
+  max-height: 96px;
+  width: auto;
+  opacity: 0.95;
+
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.1),
+      rgba(255,255,255,0.1) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+}
+
+/* Remove placeholder quando tiver imagem real */
+.logo-box img[src]:not([src=""]) {
+  background: none;
+  padding: 0;
+}
+
+/* HERO CONTENT */
+.hero-content h1 {
+  font-size: clamp(32px, 9vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.hero-content h1 span {
+  color: #f2b705;
+}
+
+.hero-content p {
+  margin: 1.5rem 0;
+}
+
+/* MACACOS NA LABUTA IMAGEM */
+
+.cacoNaLabuta{
+    display: flex;
+    border-radius: 5%;
+
+}
+
+/* MEDIA BOX (IMAGENS) */
+.media-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  margin: 2rem 0;
+
+  /* background:
+    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.08) 10px,
+      transparent 10px,
+      transparent 20px
+    ); */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* BLOCS */
+.block {
+  padding: 4rem 1.5rem;
+}
+
+.block.dark {
+  background: #000;
+}
+
+.block.light {
+  background: #ffffff49;
+  color: #fffdfd;
+}
+
+.block.light .media-box {
+  background:
+    linear-gradient(135deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.06),
+      rgba(0,0,0,0.06) 10px,
+    
+    );
+}
+
+/* SERVICES */
+.service {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.service span {
+  font-weight: 900;
+  color: #f2b705;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  background: #f2b705;
+  color: #000;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+   position: relative;
+  transition:
+  transform 0.2s ease,
+  box-shadow 0.2s ease,
+  background-color 0.2s ease;
+}
+
+
+
+/* Hover (mouse / desktop) */
+.cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Clique / toque */
+.cta:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Foco (acessibilidade) */
+.cta:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(0, 0, 0, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.25);
+}
+/* CTA BLOCK */
+.cta-block {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #f2b705, #1db954);
+  color: #000;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background: #000;
+}
+
+/* ANIMAÇÃO */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
