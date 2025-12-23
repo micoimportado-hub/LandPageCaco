@@ -50,7 +50,7 @@ body {
   opacity: 0.95;
 
   background:
-    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+    linear-gradient(135deg, rgba(241, 241, 241, 0.08), rgba(255, 232, 232, 0.02)),
     repeating-linear-gradient(
       45deg,
       rgba(255,255,255,0.1),

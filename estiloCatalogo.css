@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #020617;
+  --bg-soft: #0f172a;
+  --card: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #facc15;
+  --radius: 16px;
+}
+
+/* BASE */
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* FADE-IN */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  text-align: center; 
+}
+
+.logo {
+  width: 110px;
+  margin: 0 auto 1rem;
+  border-radius: 10%;
+}
+
+/* SEÇÕES */
+.section {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* BOTÃO */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.8rem;
+  background: var(--accent);
+  color: #020617;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(250,204,21,.35);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* CATÁLOGO */
+.catalog-wrapper {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.product-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.product-row::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  min-width: 260px;
+  background: var(--card);
+  border-radius: var(--radius);
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+/* SETAS */
+.scroll-btn {
+  position: absolute;
+  top: 42%;
+  background: var(--accent);
+  border: none;
+  font-size: 2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.scroll-btn.left {
+  left: -16px;
+}
+
+.scroll-btn.right {
+  right: -16px;
+}
+
+/* DETALHE */
+.product-detail {
+  display: none;
+}
+
+.product-detail.active {
+  display: block;
+}
+
+.detail-gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.detail-gallery img {
+  height: 220px;
+  border-radius: var(--radius);
+}
+
+.back-btn {
+  margin-bottom: 1rem;
+  background: none;
+  color: var(--accent);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
