@@ -5,10 +5,10 @@
 }
 
 :root {
-  --bg-main: #020617;
-  --bg-soft: #0f172a;
+  --bg-main: #f0ebeb;
+  --bg-soft: #f0ebeb;
   --card: #020617;
-  --text: #e5e7eb;
+  --text: #1d1d1b;
   --muted: #94a3b8;
   --accent: #facc15;
   --radius: 16px;
@@ -98,6 +98,7 @@ img {
   padding: 0.5rem 0 1rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  color: yellow;
 }
 
 .product-row::-webkit-scrollbar {
@@ -172,4 +173,5 @@ img {
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  color: #020617;
 }
